@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html lang="pl" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Szklanka.pl - Forum o wszystkim dla wszystkich</title>
+    <meta name="description" content="Serwis poświęcony celom rozwiązywania problemów na dowolne tematy.
+        Naucz się wszystkiego, co chcesz wiedzieć!" />
+    <meta name="keywords" content="forum, napisz post, post, informacja, dowiedz sie czego chcesz, pomoc" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,700i,900,900i&display=swap&subset=latin-ext" rel="stylesheet">
+</head>
+
+<body>
+
+<div id="container">
+
+    <div id="logo"><img th:src="@{/img/logo.png}">
+        SZKLANKA NA STÓŁ </div>
+
+    <div id="menu">
+        <div class="option"><a th:href="@{/}">HOME</a></div>
+        <div class="option"><a th:href="@{/forum}">FORUM</a></div>
+        <div class="option"><a th:href="@{/register}">REJESTRACJA</a></div>
+        <div class="option"><a th:href="@{/loginform}">ZALOGUJ SIĘ</a></div>
+        <div class="option"><a th:href="@{/project}">O PROJEKCIE</a></div>
+        <div style="clear:both;"></div>
+    </div>
+
+    <div id="sidebar">
+        <div sec:authorize="isAuthenticated()">Zalogowany jako <span style="color: #fa5042" sec:authentication="name"></span><hr>
+            <form action="logout" th:action="@{/logout}" method="post" >
+                <input type="submit" value="Wyloguj" /></form></div><hr>
+        <div class="optionL"><a th:href="@{/}">HOME</a></div>
+        <div class="optionL"><a th:href="@{/forum}">FORUM</a></div>
+        <div class="optionL"><a th:href="@{/project}">O PROJEKCIE</a></div>
+        <div style="clear:both;"></div>
+    </div>
+
+    <div id="content">
+        <span class="bigtitle">Dodaj swój artykuł</span>
+        <div style="height: 15px;"></div>
+        <div class="dottedline"></div>
+
+        <form action="#" method="post" th:action="@{/save}" th:object="${article}">
+            <p>Write it:</p>
+            <p>Title:</p>
+            <input type="text" th:field="*{articleTitle}" placeholder="Title..."/>
+            <p>Content:</p>
+            <textarea name="content" cols="80" rows="20" th:field="*{articleContent}" placeholder="Content..."/>
+            <input type="hidden" name="author" th:value="${currentUser}" th:errorclass="field-error"/>
+            </p>
+            <hr>
+            <input type="submit" value="Submit your post!" />
+        </form>
+
+
+    </div>
+
+    <div id="footer">
+        Szklana na stół! Zapytaj o to co chcesz wiedzieć! Strona w sieci od 2019 roku. &copy; Wszelkie prawa zastrzeżone
+    </div>
+
+
+
+
+</div>
+
+</body>
+
+</html>

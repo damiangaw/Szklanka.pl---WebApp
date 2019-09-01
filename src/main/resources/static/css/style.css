@@ -1,0 +1,161 @@
+body{
+    background-color: #404040;
+    background-image: url(../img/background.jpeg);
+    font-family: 'Lato', sans-serif;
+}
+
+#container{
+    width:1000px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#logo{
+    color:white;
+    margin-top:20px;
+    font-size: 44px;
+    font-weight: 900;
+    letter-spacing: 20px;
+    text-align: left;
+}
+
+#menu{
+    background-color: rgba(27,28,27,0.9);
+    margin-top: 30px;
+    color: #FFF;
+    padding: 10px;
+    margin-left: 420px;
+}
+
+#topbar{
+    background: rgba(72, 68, 63, 0.8);
+    filter: alpha(opacity=50);
+    color:white;
+    padding:10px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    height:170px;
+
+}
+
+#topbarL{
+    float: left;
+    padding:20px;
+    width: 138px;
+    text-align: center;
+    border-right: 2px dotted #cccccc;
+}
+#topbarR{
+    float: left;
+    padding: 20px;
+    width: 760px;
+    font-size: 16px;
+    text-align: justify;
+}
+
+#sidebar{
+    color:lightgray;
+    float: left;
+    width:148px;
+    min-height: 620px;
+    padding: 20px;
+    background-color: rgba(168,164,159,0.2);
+    text-align: center;
+    font-size: 18px;
+    border-right: 2px dotted #666666;
+
+}
+
+#content{
+    float: left;
+    padding: 40px;
+    width: 730px;
+    background-color: rgba(250, 250, 250, 0.8);
+    min-height: 580px;
+    text-align: justify;
+}
+
+#content a{
+    float: right;
+    padding: 20px;
+    background-color: #9c9c9c;
+    color: white;
+}
+
+#content a:hover{
+    background-color: #fa5042;
+    color:white;
+    cursor: pointer;
+}
+
+#footer{
+    clear: both;
+    color:white;
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+}
+
+.option{
+    color: white;
+    text-decoration: none;
+    float:left;
+    min-width:50px;
+    height: 25px;
+    font-size: 18px;
+    padding:10px;
+    opacity:0.8;
+}
+
+.option:hover{
+    background-color: #fa5042;
+    cursor: pointer;
+}
+
+.optionL{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    height: 25px;
+    padding: 10px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    height: 25px;
+}
+
+h2 {
+    font-size: 18px;
+    color: #260508;
+}
+
+h1 {
+    font-size: 14px;
+    color: black;
+}
+
+p {
+    color: #404040;
+}
+
+.optionL:hover{
+    background-color: #fa5042;
+    color:white;
+    cursor: pointer;
+}
+
+.bigtitle{
+    font-size: 32px;
+    font-weight: 900;
+    letter-spacing: 4px;
+}
+
+.dottedline{
+    height: 5px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    border-bottom: 2px dotted #444444;
+}
