@@ -11,10 +11,6 @@ import java.util.List;
 @Service
 public class ArticleService {
 
-    /*
-    wstrzykiwanie przez pole i konstruktor wtedy gdy obietky są niezbędne do działania danej klasy
-    jesli dany element nie musi byc inicjalizowany, to wtedy przez setter, w specjlanych przypakach
-     */
     @Autowired
     private ArticleDataRepository articleDataRepository;
 
