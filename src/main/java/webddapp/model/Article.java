@@ -1,13 +1,11 @@
 package webddapp.model;
 
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.List;
 
 
 @Entity
@@ -23,6 +21,8 @@ public class Article {
     @NotEmpty
     private String author;
     private LocalDateTime creationTime;
+    @ManyToOne(cascade = CascadeType.PERSIST)
+    private Comment commentsList;
 
 
     public Article(){
@@ -70,6 +70,14 @@ public class Article {
     public String getCreationTime() {
         return creationTime.format(DateTimeFormatter.ISO_LOCAL_DATE);
     }
+
+    public Comment getCommentsList() {
+        return commentsList;
+    }
+
+    //    public List<Comment> getCommentsList() {
+//        return commentsList;
+//    }
 
     public void setCreationTime(LocalDateTime creationTime) {
         this.creationTime = creationTime;

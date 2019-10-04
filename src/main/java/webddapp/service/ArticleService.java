@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import webddapp.data.ArticleDataRepository;
 import webddapp.model.Article;
+import webddapp.model.Comment;
 
 import java.util.Collections;
 import java.util.List;
