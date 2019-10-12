@@ -26,9 +26,10 @@
 
         <div class="option"><a th:href="@{/}">HOME</a></div>
         <div class="option"><a th:href="@{/forum}">FORUM</a></div>
-        <div class="option"><a th:href="@{/register}">REJESTRACJA</a></div>
-        <div class="option"><a th:href="@{/loginform}">ZALOGUJ SIĘ</a></div>
-        <div class="option"><a th:href="@{/project}">O PROJEKCIE</a></div>
+        <div sec:authorize="isAnonymous()">
+            <div class="option"><a th:href="@{/register}">REJESTRACJA</a></div>
+            <div class="option"><a th:href="@{/loginform}">ZALOGUJ SIĘ</a></div>
+        </div>        <div class="option"><a th:href="@{/project}">O PROJEKCIE</a></div>
         <div style="clear:both;"></div>
     </div>
 

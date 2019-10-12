@@ -21,10 +21,13 @@ body{
 
 #menu{
     background-color: rgba(27,28,27,0.9);
-    margin-top: 30px;
+    margin: 30px 0 0 auto;
     color: #FFF;
     padding: 10px;
-    margin-left: 420px;
+    display: flex;
+    justify-content: flex-end;
+    width: fit-content;
+
 }
 
 #topbar{
