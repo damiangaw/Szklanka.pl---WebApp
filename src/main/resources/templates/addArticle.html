@@ -51,8 +51,7 @@
             <input type="text" th:field="*{articleTitle}" placeholder="Title..."/>
             <p>Content:</p>
             <textarea name="content" cols="80" rows="20" th:field="*{articleContent}" placeholder="Content..."/>
-            <input type="hidden" name="author" th:value="${currentUser}" th:errorclass="field-error"/>
-            </p>
+            <input type="hidden" name="author" th:value="${currentUser}"/>
             <hr>
             <input type="submit" value="Submit your post!" />
         </form>
