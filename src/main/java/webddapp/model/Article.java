@@ -1,14 +1,9 @@
 package webddapp.model;
 
-
-import org.springframework.security.core.Authentication;
-
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.List;
-
 
 @Entity
 public class Article {
