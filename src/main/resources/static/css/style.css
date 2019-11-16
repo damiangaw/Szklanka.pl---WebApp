@@ -20,6 +20,10 @@ html {
     font-size: 20px;
 }
 
+body:after{
+    position:absolute; width:0; height:0; overflow:hidden; z-index:-1;
+    content: 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)), url(../img/background.jpeg)';
+}
 .row {
     max-width: 1200px;
     margin: 0 auto;
