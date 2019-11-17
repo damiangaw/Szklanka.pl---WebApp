@@ -13,49 +13,62 @@
     <link rel="stylesheet" type="text/css" th:href="@{/css/queries.css}"/>
     <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
     <link rel="stylesheet" type="text/css" th:href="@{/css/animate.css}"/>
+
+    <script type="text/javascript" th:src="@{../static/js/scripts.js}"></script>
+    <script type="text/javascript" th:src="@{../static/js/noframework.js}"></script>
+    <script type="text/javascript" th:src="@{../static/js/waypoints.debug.js}"></script>
+    <script type="text/javascript" th:src="@{../static/js/jquery-3.4.1.min.js}"></script>
+    <script type="text/javascript" th:src="@{../static/js/jquery.waypoints.min.js}"></script>
+    <script type="text/javascript" th:src="@{../static/js/noframework.waypoints.min.js}"></script>
+
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,700i,900,900i&display=swap&subset=latin-ext" rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <div class="row main-nav">
-            <div class="logo animated fadeInDown"><img th:src="@{/img/logo.png}"></div>
-            <ul class="menu animated fadeInDown">
-                <li>
-                    <div style="text-transform: uppercase" sec:authorize="isAuthenticated()">Login: <span style="color:
-                #fa5042" sec:authentication="name"></span>
-                    </div>
-                </li>
-                <li>
-                    <div sec:authorize="isAuthenticated()">
-                        <form action="logout" th:action="@{/logout}" method="post" >
-                            <input type="submit" value="Wyloguj" />
-                        </form>
-                    </div>
-                </li>
-                <li><a th:href="@{/}">HOME</a></li>
-                <li><a th:href="@{/forum}">FORUM</a></li>
-                <li><a th:href="@{/project}">O PROJEKCIE</a></li>
-                <li>
-                    <div sec:authorize="isAnonymous()">
-                        <a th:href="@{/register}">REJESTRACJA</a>
-                    </div>
-                </li>
-                <li>
-                    <div sec:authorize="isAnonymous()">
-                        <a th:href="@{/loginform}">ZALOGUJ SIĘ</a>
-                    </div>
-                </li>
-            </ul>
+        <div class="row">
+              <nav class="main-nav">
+                <div class="logo animated fadeInDown"><img th:src="@{/img/logo.png}"></div>
+
+                <ul class="menu animated fadeInDown">
+                    <li>
+                        <div style="text-transform: uppercase" sec:authorize="isAuthenticated()">Login: <span style="color:
+                    #fa5042" sec:authentication="name"></span>
+                        </div>
+                    </li>
+                    <li>
+                        <div sec:authorize="isAuthenticated()">
+                            <form action="logout" th:action="@{/logout}" method="post" >
+                                <input type="submit" value="Wyloguj" />
+                            </form>
+                        </div>
+                    </li>
+                    <li><a th:href="@{/}">HOME</a></li>
+                    <li><a th:href="@{/forum}">FORUM</a></li>
+                    <li><a th:href="@{/project}">O PROJEKCIE</a></li>
+                    <li>
+                        <div sec:authorize="isAnonymous()">
+                            <a th:href="@{/register}">REJESTRACJA</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div sec:authorize="isAnonymous()">
+                            <a th:href="@{/loginform}">ZALOGUJ SIĘ</a>
+                        </div>
+                    </li>
+                </ul>
+              </nav>
+
             <div class="main-text animated bounceInLeft">
                 <h1>Szklanka na stół</h1>
             </div>
+
         </div>
     </header>
 
-    <section class="opis js--opis">
-            <div class="topbar clearfix">
-                <div class="row js--wp-1">
+    <section class="opis">
+            <div class="topbar js--topbar js--wp-1">
+                <div class="row">
                     <div class="topbarL">
                         <img th:src="@{/img/glass.png}" alt="Image of a glass">
                     </div>
@@ -111,12 +124,6 @@
         </div>
     </footer>
 
-    <script th:src="@{https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js}"></script>
-    <script th:src="@{//cdn.jsdelivr.net/respond/1.4.2/respond.min.js}"></script>
-    <script th:src="@{//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js}"></script>
-    <script th:src="@{//cdn.jsdelivr.net/selectivizr/1.0.3b/selectivizr.min.js}"></script>
-    <script rel="script" type="text/javascript" th:href="@{/static/js/jquery.waypoints.min.js}"></script>
-    <script rel="script" type="text/javascript" th:href="@{/static/js/scripts.js}"></script>
 </body>
 
 </html>
