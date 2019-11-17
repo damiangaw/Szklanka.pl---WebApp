@@ -16,4 +16,6 @@ public class SecurityController {
     public String currentUserName(Authentication authentication) {
         return authentication.getName();
     }
+
 }
+
