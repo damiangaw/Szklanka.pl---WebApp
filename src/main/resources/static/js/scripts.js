@@ -1,15 +1,19 @@
 $(document).ready(function() {
 
     /* For the sticky navigation */
-    $('.js--wp-1').waypoint(function(direction) {
-        if (direction == "down") {
+    $('.js--topbar').waypoint(function(direction)
+    {
+        if (direction === "down")
+        {
             $('.main-nav').addClass('sticky');
-        } else {
-            $('.main-nav').removeClass('sticky');
         }
-    }, {
-        offset: '60px;'
-    });
+        else
+            {
+            $('.main-nav').removeClass('sticky');
+            }
+    },
+        {offset: '60px;'}
+    );
 
     /* Animations on scroll */
     $('.js--wp-1').waypoint(function(direction) {
