@@ -12,7 +12,7 @@ $(document).ready(function() {
             $('.main-nav').removeClass('sticky');
             }
     },
-        {offset: '60px;'}
+        {offset: '0px;'}
     );
 
     /* Animations on scroll */
