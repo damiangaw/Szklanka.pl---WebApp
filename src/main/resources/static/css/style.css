@@ -125,8 +125,8 @@ header{
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #575757;
-    box-shadow: 0 2px 2px #1c1c1c;
+    background-color: #111111;
+    box-shadow: 0 2px 2px #4a4a4a;
     z-index: 9999;
 }
 
