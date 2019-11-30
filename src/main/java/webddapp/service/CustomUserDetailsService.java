@@ -17,8 +17,6 @@ import java.util.Set;
 @Component
 public class CustomUserDetailsService implements UserDetailsService {
 
-
-
     private UserRepository userRepository;
 
     @Autowired

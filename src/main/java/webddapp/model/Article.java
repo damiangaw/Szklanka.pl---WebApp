@@ -21,7 +21,6 @@ public class Article {
     @ManyToOne(cascade = CascadeType.PERSIST)
     private Comment commentsList;
 
-
     public Article(){
         this.creationTime= LocalDateTime.now();
     }
