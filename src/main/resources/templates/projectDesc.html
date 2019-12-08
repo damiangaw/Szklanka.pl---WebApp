@@ -20,34 +20,36 @@
 <body>
     <header class="header2">
         <div class="row">
-            <div class="logo"><img th:src="@{/img/logo.png}"></div>
-            <ul class="menu">
-                <li>
-                    <div style="text-transform: uppercase" sec:authorize="isAuthenticated()">Login: <span style="color:
-                        #fa5042" sec:authentication="name"></span>
-                    </div>
-                </li>
-                <li>
-                    <div sec:authorize="isAuthenticated()">
-                        <form action="logout" th:action="@{/logout}" method="post" >
-                            <input type="submit" value="Wyloguj" />
-                        </form>
-                    </div>
-                </li>
-                <li><a th:href="@{/}">HOME</a></li>
-                <li><a th:href="@{/forum}">FORUM</a></li>
-                <li><a th:href="@{/project}">O PROJEKCIE</a></li>
-                <li>
-                    <div sec:authorize="isAnonymous()">
-                        <a th:href="@{/register}">REJESTRACJA</a>
-                    </div>
-                </li>
-                <li>
-                    <div sec:authorize="isAnonymous()">
-                        <a th:href="@{/loginform}">ZALOGUJ SIĘ</a>
-                    </div>
-                </li>
-            </ul>
+            <nav class="main-nav">
+                <div class="logo"><img th:src="@{/img/logo.png}"></div>
+                <ul class="menu">
+                    <li>
+                        <div style="text-transform: uppercase" sec:authorize="isAuthenticated()">Login: <span style="color:
+                            #fa5042" sec:authentication="name"></span>
+                        </div>
+                    </li>
+                    <li>
+                        <div sec:authorize="isAuthenticated()">
+                            <form action="logout" th:action="@{/logout}" method="post" >
+                                <input type="submit" value="Wyloguj" />
+                            </form>
+                        </div>
+                    </li>
+                    <li><a th:href="@{/}">HOME</a></li>
+                    <li><a th:href="@{/forum}">FORUM</a></li>
+                    <li><a th:href="@{/project}">O PROJEKCIE</a></li>
+                    <li>
+                        <div sec:authorize="isAnonymous()">
+                            <a th:href="@{/register}">REJESTRACJA</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div sec:authorize="isAnonymous()">
+                            <a th:href="@{/loginform}">ZALOGUJ SIĘ</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
             <div class="main-text2">
                 <h1>Szklanka na stół</h1>
             </div>
@@ -75,7 +77,7 @@
     </section>
     -->
 
-    <section class="main-content">
+    <section class="main-content js--topbar">
         <div class="row">
             <div class="col span-1-of-5 nav">
                 <ul class="sidebar">
