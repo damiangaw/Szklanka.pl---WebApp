@@ -65,6 +65,34 @@ p {
     line-height: 135%;
 }
 
+input[type=submit] {
+    display: inline-block;
+    margin: 0 auto;
+    padding: 10px 30px;
+    font-weight: 400;
+    text-decoration: none;
+    border-radius: 10px;
+    -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+input[type=submit] {
+    background-color: #e62006;
+    border: 1px solid #e62006;
+    color: #fff;
+    margin-top: 15px;
+}
+
+input[type=submit]:hover,
+input[type=submit]:active {
+    background-color: #be2608;
+}
+
+.menu input[type=submit] {
+    padding: 4px 30px;
+    background-color: darkred;
+}
+
 /*                HEADER              */
 /*                HEADER              */
 
@@ -133,11 +161,14 @@ header{
     display: none;
 }
 
-.sticky .menu { margin-top: 5px;}
+.sticky .menu {
+    margin-top: 2px;
+    padding: 10px;
+}
 
 .sticky .menu li a:link,
 .sticky .menu li a:visited {
-    padding: 16px 0;
+    padding: 10px 0;
     color: #ffffff;
 }
 
@@ -185,7 +216,7 @@ header{
 /*          MAIN CONTENT          */
 
 .main-content{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)), url(../img/background.jpeg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.9)), url(../img/background.jpeg);
     background-position: center;
     background-size: cover;
     height: auto;
@@ -202,7 +233,9 @@ header{
 .nav ul{
     list-style: none;
 }
-
+.nav ul li {
+    margin-bottom: 30px;
+}
 .nav ul li p {
     font-size: 75%;
     font-weight: 400;
@@ -235,16 +268,89 @@ header{
     text-align: justify;
 }
 
-.artc p{
+/*      FORUM       */
+/*      FORUM       */
+/*      FORUM       */
+
+
+ion-icon {
+    font-size: 25px;
+    float: left;
+    margin-right: 15px;
+}
+
+.artc p {
+    font-size: 90%;
+}
+
+.artc ul{
+    list-style: none;
+    text-align: right;
+}
+
+.artc ul li{
+    font-size: 80%;
     margin: 10px 0;
+    display: inline-block;
+}
+
+.artc #author{
+    color: red;
+}
+
+.artc h3 {
+    font-size: 115%;
+    color: #000000;
+
 }
 
 .dottedline{
     height: 5px;
-    margin-top: 15px;
+    margin-top: 35px;
     margin-bottom: 20px;
     border-bottom: 2px dotted #444444;
 }
+
+/*        O Projekcie         */
+/*        O Projekcie         */
+/*        O Projekcie         */
+
+.project h3 {
+    font-size: 120%;
+    color: #000000;
+    margin-bottom: 30px;
+}
+
+.project p {
+    font-size: 90%;
+    margin-top: 10px;
+}
+
+/*     FORM      */
+/*     FORM      */
+/*     FORM      */
+
+.register-form {
+    width: 70%;
+    margin: 0 auto;
+}
+
+input[type=text],
+input[type=email],
+input[type=password],
+textarea {
+    width: 100%;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+textarea {
+    height: 100px;
+}
+
+*:focus {outline: none;}
+
 
 
 /*        FOOTER         */

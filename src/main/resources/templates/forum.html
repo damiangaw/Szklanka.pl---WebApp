@@ -56,68 +56,46 @@
         </div>
     </header>
 
-    <!--
-    <section class="opis">
-        <div class="topbar clearfix">
-            <div class="row">
-                <div class="topbarL">
-                    <img th:src="@{/img/glass.png}">
-                </div>
-                <div class="topbarR">
-                    <h2>O projekcie słów kilka</h2>
-                    <p>Projekt ma na celu stworzenie strony funkcjonującej na zasadach typowego forum
-                        internetowego.
-                        Każdy gość może tu przejrzeć udostępnione posty oraz dyskusje pod nimi prowadzone. Aby dołączyć do społeczności
-                        lub dodawać własne posty - konieczne jest założenie konta. Po założeniu konta każdy otrzymuje pełen dostęp do serwisu.
-                        Po co? Aby można było pytać i otrzymać wiarygodne względnie odpowiedzi :)</p>
-                </div>
-            </div>
-        </div>
-
-    </section>
-    -->
-
     <section class="main-content js--topbar">
         <div class="row js--topbar">
             <div class="col span-1-of-5 nav">
                 <ul class="sidebar">
-                    <li><a th:href="@{/}">HOME</a></li>
-                    <li><a th:href="@{/forum}">FORUM</a></li>
-                    <li><a th:href="@{/project}">O PROJEKCIE</a></li>
                     <li><a th:href="@{/add}">Dodaj post</a></li>
                 </ul>
-                <ul class="notka">
+                <ul>
                     <li>
                         <h3>Notka #1</h3>
-                        <p>Jakiś randomowy tekst dla forumowiczów</p>
+                        <p>Administratorzy nie ponoszą odpowiedzialności za treść wpisów użytkowników forum.</p>
                     </li>
                     <li>
                         <h3>Notka #2</h3>
-                        <p>Jakiś randomowy tekst dla forumowiczów</p>
+                        <p>Użytkownik ma prawo tylko do jednego aktywnego konta na forum.</p>
                     </li>
                     <li>
                         <h3>Notka #3</h3>
-                        <p>Jakiś randomowy tekst dla forumowiczów</p>
+                        <p>Posty, tematy, konta użytkowników niezgodne z Regulaminem i normami społecznymi forum będą
+                            usuwane lub ich treść/elementy będą modyfikowane przez administratora lub moderatora.</p>
                     </li>
                 </ul>
             </div>
 
             <div class="col span-4-of-5">
                 <div class="content artc">
-                    <h2>All recently added post's</h2>
+                    <h2>Najnowsze posty:</h2>
                     <div class="dottedline"></div>
 
                     <div th:if="not ${allArticles.isEmpty()}">
                         <div th:each="singleArticle: ${allArticles}" th:object="${singleArticle}">
-                            <h3 th:text="|Dodano: *{creationTime}|">Default creation Time</h3>
-
-                            <h2 th:text="|*{author} : *{articleTitle}|">Author</h2>
-
+                            <ion-icon name="mail-open"></ion-icon>
+                            <h3 th:text="|*{articleTitle}|">Title</h3>
                             <p th:text="*{articleContent}">Some random Content of the article</p>
 
+                            <ul>
+                                <li id="data" th:text="|Dodano: *{creationTime},|">Default creation Time and
+                                author</li>
+                                <li id="author" th:text="|*{author}|">Author</li>
+                            </ul>
                             <!--<p th:object="*{commentsList}"></p>-->
-
-
                             <hr>
                         </div>
                     </div>
@@ -139,6 +117,7 @@
         <script type="application/x-javascript" th:src="@{/js/jquery-3.4.1.min.js}"></script>
         <script type="application/x-javascript" th:src="@{/js/jquery.waypoints.js}"></script>
         <script type="application/x-javascript" th:src="@{/js/scripts.js}"></script>
+        <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     </div>
 
 </body>

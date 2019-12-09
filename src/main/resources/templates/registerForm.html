@@ -55,64 +55,68 @@
         </div>
     </header>
 
-    <!--
-    <section class="opis">
-        <div class="topbar clearfix">
-            <div class="row">
-                <div class="topbarL">
-                    <img th:src="@{/img/glass.png}">
-                </div>
-                <div class="topbarR">
-                    <h2>O projekcie słów kilka</h2>
-                    <p>Projekt ma na celu stworzenie strony funkcjonującej na zasadach typowego forum
-                        internetowego.
-                        Każdy gość może tu przejrzeć udostępnione posty oraz dyskusje pod nimi prowadzone. Aby dołączyć do społeczności
-                        lub dodawać własne posty - konieczne jest założenie konta. Po założeniu konta każdy otrzymuje pełen dostęp do serwisu.
-                        Po co? Aby można było pytać i otrzymać wiarygodne względnie odpowiedzi :)</p>
-                </div>
-            </div>
-        </div>
-
-    </section>
-    -->
-
     <section class="main-content js--topbar">
         <div class="row">
             <div class="col span-1-of-5 nav">
-                <ul class="sidebar">
-                    <li><a th:href="@{/}">HOME</a></li>
-                    <li><a th:href="@{/forum}">FORUM</a></li>
-                    <li><a th:href="@{/project}">O PROJEKCIE</a></li>
-                </ul>
                 <ul>
                     <li>
                         <h3>Notka #1</h3>
-                        <p>Jakiś randomowy tekst dla forumowiczów</p>
+                        <p>Administratorzy nie ponoszą odpowiedzialności za treść wpisów użytkowników forum.</p>
                     </li>
                     <li>
                         <h3>Notka #2</h3>
-                        <p>Jakiś randomowy tekst dla forumowiczów</p>
+                        <p>Użytkownik ma prawo tylko do jednego aktywnego konta na forum.</p>
                     </li>
                     <li>
                         <h3>Notka #3</h3>
-                        <p>Jakiś randomowy tekst dla forumowiczów</p>
+                        <p>Posty, tematy, konta użytkowników niezgodne z Regulaminem i normami społecznymi forum będą
+                            usuwane lub ich treść/elementy będą modyfikowane przez administratora lub moderatora.</p>
                     </li>
                 </ul>
             </div>
 
             <div class="col span-4-of-5">
-                <div class="content">
-                    <h2>Register for free</h2>
+                <div class="content register">
+                    <h2>Rejestracja za darmo!</h2>
                     <div class="dottedline"></div>
-                    <form action="#" method="post" th:action="@{/register}" th:object="${user}">
-                        <p th:errors="*{email}">Email errors</p>
-                        <p>Podaj swój e-mail: </p><input th:field="*{email}" type="email" placeholder="Email" /><br />
-                        <p>Podaj login: </p><input th:field="*{login}" placeholder="Login" /><br />
-                        <p th:errors="*{password}">Password errors</p>
-                        <p>Podaj hasło: </p><input th:field="*{password}" type="password" placeholder="Password" /><br />
-                        <hr>
-                        <input type="submit" value="Register" />
+                    <form action="#" method="post" th:action="@{/register}" th:object="${user}" class="register-form">
+                        <div class="row">
+                            <div class="col span-1-of-3">
+                                <label for="name">Podaj swój login:</label>
+                            </div>
+                            <div class="col span-2-of-3">
+                                <input id="name" th:field="*{login}" type="text" placeholder="login" required/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col span-1-of-3">
+                                <label for="email">Podaj swój e-mail:</label>
+                            </div>
+                            <div class="col span-2-of-3">
+                                <p th:errors="*{email}">Email errors</p>
+                                <input id="email" th:field="*{email}" type="email" placeholder="email" required/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col span-1-of-3">
+                                <label for="pass">Podaj hasło:</label>
+                            </div>
+                            <div class="col span-2-of-3">
+                                <p th:errors="*{password}">Password errors</p>
+                                <input id="pass" th:field="*{password}" type="password" placeholder="hasło"
+                                       required/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col span-1-of-3">
+                                <label for="zatwierdz">&nbsp;</label>
+                            </div>
+                            <div class="col span-2-of-3">
+                                <input id="zatwierdz" type="submit" value="Zarejestruj"/>
+                            </div>
+                        </div>
                     </form>
+
                 </div>
             </div>
         </div>

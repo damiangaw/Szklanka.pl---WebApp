@@ -79,23 +79,19 @@
     <section class="main-content js--topbar">
         <div class="row">
             <div class="col span-1-of-5 nav">
-                <ul class="sidebar">
-                    <li><a th:href="@{/}">HOME</a></li>
-                    <li><a th:href="@{/forum}">FORUM</a></li>
-                    <li><a th:href="@{/project}">O PROJEKCIE</a></li>
-                </ul>
                 <ul>
                     <li>
                         <h3>Notka #1</h3>
-                        <p>Jakiś randomowy tekst dla forumowiczów</p>
+                        <p>Administratorzy nie ponoszą odpowiedzialności za treść wpisów użytkowników forum.</p>
                     </li>
                     <li>
                         <h3>Notka #2</h3>
-                        <p>Jakiś randomowy tekst dla forumowiczów</p>
+                        <p>Użytkownik ma prawo tylko do jednego aktywnego konta na forum.</p>
                     </li>
                     <li>
                         <h3>Notka #3</h3>
-                        <p>Jakiś randomowy tekst dla forumowiczów</p>
+                        <p>Posty, tematy, konta użytkowników niezgodne z Regulaminem i normami społecznymi forum będą
+                            usuwane lub ich treść/elementy będą modyfikowane przez administratora lub moderatora.</p>
                     </li>
                 </ul>
             </div>
@@ -104,11 +100,32 @@
                 <div class="content">
                     <h2>Log into your account</h2>
                     <div class="dottedline"></div>
-                    <form action="processlogin" method="post" th:action="@{/processlogin}" >
-                        <p>Enter your email: </p><input name="user" placeholder="Email" /><br />
-                        <p>Enter your passw: </p><input type="password" name="pass" placeholder="Password" /><br />
-                        <hr>
-                        <input type="submit" value="LOG IN" />
+                    <form action="processlogin" method="post" th:action="@{/processlogin}" class="register-form">
+                        <div class="row">
+                            <div class="col span-1-of-3">
+                                <label for="user">Podaj swój email:</label>
+                            </div>
+                            <div class="col span-2-of-3">
+                                <input id="user" name="user" type="email" placeholder="email" required/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col span-1-of-3">
+                                <label for="mail">Podaj swoje hasło:</label>
+                            </div>
+                            <div class="col span-2-of-3">
+                                <input id="mail" type="password" name="pass" placeholder="hasło" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col span-1-of-3">
+                                <label for="zatwierdz2">&nbsp;</label>
+                            </div>
+                            <div class="col span-2-of-3">
+                                <input id="zatwierdz2" type="submit" value="Zaloguj" />
+                            </div>
+                        </div>
+
                     </form>
                 </div>
             </div>
