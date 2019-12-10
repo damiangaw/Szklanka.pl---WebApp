@@ -147,6 +147,10 @@ header{
     border-bottom: 2px solid darkred;
 }
 
+.img-cont {
+    display: none;
+}
+
 .sticky {
     position: fixed;
     top: 0;
@@ -161,8 +165,25 @@ header{
     display: none;
 }
 
+.sticky .img-cont {
+    display: block;
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    margin-left: 10%;
+    margin-top: 5px;
+    float: left;
+    position: relative;
+}
+
+.sticky .img-cont img {
+    width: 100%;
+    height: auto;
+}
+
 .sticky .menu {
-    margin-top: 2px;
+    margin-top: 1px;
+    margin-right: 10%;
     padding: 10px;
 }
 
