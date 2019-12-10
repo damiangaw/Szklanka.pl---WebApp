@@ -109,14 +109,40 @@
 
     <footer>
         <div class="row">
+            <div class="col span-1-of-2">
+                <ul id="autorzy">
+                    <li><p>Autorzy:</p></li>
+                    <li><p>Dawid Dolny</p></li>
+                    <li><p>Damian Gawin</p></li>
+                </ul>
+            </div>
+            <div class="col span-1-of-4">
+                <ul class="icon">
+                    <li><ion-icon name="call"></ion-icon></li>
+                    <li>&nbsp;</li>
+                    <li><ion-icon name="ios-at"></ion-icon></li>
+                    <li><ion-icon name="ios-at"></ion-icon></li>
+                </ul>
+            </div>
+            <div class="col span-1-of-4">
+                <ul>
+                    <li><p>Kontakt:</p></li>
+                    <li><p>Uniwersytet Gdański</p></li>
+                    <li><p>dawiddolny95@gmail.com</p></li>
+                    <li><p>gawin.damian@gmail.com</p></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
             <p>Szklana na stół! Zapytaj o to co chcesz wiedzieć! Strona w sieci od 2019 roku. &copy; Wszelkie prawa zastrzeżone</p>
-
         </div>
     </footer>
+
     <div th:fragment="Scripts">
         <script type="application/x-javascript" th:src="@{/js/jquery-3.4.1.min.js}"></script>
         <script type="application/x-javascript" th:src="@{/js/jquery.waypoints.js}"></script>
         <script type="application/x-javascript" th:src="@{/js/scripts.js}"></script>
+        <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     </div>
 </body>
 </html>

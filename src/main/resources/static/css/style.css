@@ -387,10 +387,26 @@ footer {
     height: auto;
 }
 
-footer p {
-    margin: 150px 0 30px 0;
+footer ul{
+    list-style: none;
+    text-align: right;
+    display: inline-block;
+    margin-bottom: 40px;
 }
 
+footer .icon {
+    float: right;
+}
+
+footer .icon li {
+    margin: 5px 0;
+    color: #606060;
+}
+
+footer #autorzy {
+    text-align: left;
+    float: left;
+}
 
 /* JAVASCRIPT */
 /* JAVASCRIPT */
